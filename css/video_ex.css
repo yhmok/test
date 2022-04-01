@@ -1,0 +1,179 @@
+#main {
+    width: 100%; height: 100vh;
+    background: #333;
+    display: flex;
+}
+/* header */
+#main header {
+    width: 20%; height: 100%;
+    padding: 10vh 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /*세로축을 상단 하단 양끝으로 배치 */
+    align-content: center;
+    justify-content: space-between;
+    position:relative; z-index: 3;
+}
+#main header h1 {
+    font-size: 0;
+}
+#main header h1 i {
+    display: inline-block;
+    font-size: 5vw;
+    margin-bottom: 15px;
+    color: #fff;
+}
+#main header h1 span {
+   font-weight: normal; font-size: 0.8vw;
+   color: #fff;
+}
+#main header address {
+    font-weight: normal;
+    font-size: 11px;
+    color: #888;
+}
+/* nav */
+#main nav {
+    position: absolute; top: 10vh; right: 5vw;
+    z-index:3;
+}
+#main nav ul {
+    display: flex;
+}
+#main nav ul li a {
+    font-size: 18px; color: #bbb;
+    margin-right: 30px;
+}
+/* section */
+#main section {
+    width: 80%; height: 100%;
+    padding-top: 15vh;
+    display: flex;
+}
+#main section article {
+    flex: 1;
+    padding: 70px 40px 100px;
+    opacity: .6;
+    cursor: pointer;
+    transition: .5s;
+    position: relative; z-index: 1;
+}
+#main section article:before {
+    content: '';
+    display: block;
+    width: 0%; height: 95%;
+    position: absolute;
+    background-color: #444;
+    top:0; left:0;
+    transition: 1s;
+}
+#main section article .inner {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+#main section article .inner .txt {
+    width: 100%;
+    position: relative; z-index: 1;
+    transition: 0.5s; /*호버 변환시 실행시간 */
+}
+#main section article .inner .txt h2 {
+    font-size: 2vw; color: #fff;
+    margin-bottom: 40px;
+    padding-top: 70px;
+    transition: 1s;
+}
+#main section article .inner .txt h2:after {
+    /*h2하단에 꾸밈 효과 */
+    content: '';
+    display: block;
+    width: 40px; height: 2px;
+    background-color: #777;
+    margin-top: 20px;
+    transition: 1.5s;
+}
+#main section article .inner .txt p {
+    font: 14px/1.4 arial;
+    color: #999;
+}
+#main section article .inner figure {
+    width: 100%; height: 15vh;
+    background : #777;
+    overflow: hidden;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.3);
+    filter: saturate(10%); 
+    transition: 0.5s;
+}
+#main section article .inner figure video {
+    width: 100%; height: 100%;
+    /* video박스의 영역안에 꽉차게 */
+    object-fit: cover; 
+    transform: scale(1.1);
+}
+/* 상세화면 */
+#main aside {
+    width: 100%; height: 100%;
+    background: #222;
+    position: absolute; top:0; left: -100%;
+    z-index: 2;
+    padding: 20vh 7vw 14vh 20vw;
+    display: flex;
+    justify-content: space-between;
+    transition: left 1s;
+}
+/*클래스에 on이 붙으면....aside를 보이게 처리 */
+#main aside.on {
+    left:0;
+    transition: 0.5s;
+}
+#main aside .txt {
+    width: 25%; height: 100%;
+}
+#main aside .txt h1 {
+    font: normal 6vw/1 arial;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+#main aside .txt p {
+    font: 1.1vw/1.5 arial;
+    color: #666;
+    margin-bottom: 60px;
+}
+#main aside .txt span {
+    cursor:pointer;
+    color: orange;
+}
+#main aside figure {
+    width: 72%; height: 100%;
+}
+#main aside figure video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+/* hover효과 */
+#main section article:hover {
+    flex: 1.5;
+    opacity: 1;
+    z-index:2;
+}
+#main section article:hover::before {
+    left: 0; width: 80%;
+}
+#main section article:hover .inner .txt {
+    width: 75%;
+}
+#main section article:hover .inner .txt  h2 {
+    font-size: 5vw;
+    padding-top: 0px;
+}
+#main section article:hover .inner .txt  h2:after {
+    width: 120px;
+    background-color: orange;
+}
+#main section article:hover .inner figure {
+    height: 25vh;
+    filter: saturate(120%);
+    transform: translateY(3vh);
+}

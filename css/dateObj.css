@@ -1,0 +1,99 @@
+/* 전체프레임 */
+#wrap {
+    position: fixed; top:0px; left: 0;
+    width: 100%; height: 100%;
+    min-width: 1400px; min-height: 780px;
+    background-image: url(../img/bg_morning.jpg);
+    background-size: cover;
+    transition: all 2s;
+}
+/* 핸드폰 */
+figure {
+    position: absolute; top: 200px; right: -300px;
+    width: 1226px; height: 809px;
+    background-image: url(../img/phone_morning.png);
+    transition: all 2s;
+}
+figure p {
+    position: absolute; top: 100px; left: 137px;
+    width: 540px; height: 307px;
+    overflow: hidden; font-size: 60px;
+    font-weight: bold; color: #333;
+    line-height: 4.6; padding-left: 50px;
+}
+figure p span {
+    position: relative; z-index: 5;
+}
+/* 배경구름 */
+#wrap>img:nth-child(1) {
+    position: absolute; top:0; left:-1146px; opacity: .8;
+    animation: ani1 110s linear infinite;
+}
+#wrap>img:nth-child(2) {
+    position: absolute; top: 20px; left: 0px; opacity: .8;
+    animation: ani2 110s linear infinite;
+}
+/* 모바일 구름 */
+figure p img.cl1 {
+    width: 600px; height: auto; 
+    position: absolute; top: 30px; left: -600px;   
+    animation: ani3 110s linear infinite; 
+    z-index: 4;
+}
+figure p img.cl2 {
+    width: 700px; height: auto;
+    position: absolute; top: 20px; left: 0;
+    animation: ani4 110s linear infinite;
+    z-index: 4; 
+}
+
+/* 구름모션 */
+@keyframes ani1 {
+    0% {left: -1146px}
+    100% {left: 1950px}
+}
+@keyframes ani2 {
+    0% {left: 0px}
+    50% {left: 1950px; opacity: 0;}
+    50.1% {left: -1840px; opacity: .8;}
+    100% {left: 0px}
+}
+@keyframes ani3 {
+    0% {left: -600px}
+    100% {left: 540px}
+}
+@keyframes ani4 {
+    0% {left: 0px}
+    50% {left: 540px; opacity: 0;}
+    50.1% {left: -700px; opacity: .8;}
+    100% {left: 0px}
+}
+/* 아침 */
+#wrap.morning {background-image: url(../img/bg_morning.jpg);}
+#wrap.morning figure {background-image: url(../img/phone_morning.png)}
+#wrap.morning figure p {color: #333;}
+#wrap.morning>img:nth-child(1) {opacity: 1;}
+#wrap.morning>img:nth-child(2) {opacity: 1;}
+
+/* 오후 */
+#wrap.afternoon {background-image: url(../img/bg_afternoon.jpg);}
+#wrap.afternoon figure {background-image: url(../img/phone_afternoon.png)}
+#wrap.afternoon figure p {color: #333;}
+#wrap.afternoon>img:nth-child(1) {opacity: 1;}
+#wrap.afternoon>img:nth-child(2) {opacity: 1;}
+
+/* 저녁 */
+#wrap.evening {background-image: url(../img/bg_evening.jpg);}
+#wrap.evening figure {background-image: url(../img/phone_evening.png)}
+#wrap.evening figure p {color: #fff;}
+#wrap.evening>img:nth-child(1) {opacity: 0.6;}
+#wrap.evening>img:nth-child(2) {opacity: 0.6;}
+
+/* 밤 */
+#wrap.night {background-image: url(../img/bg_night.jpg);}
+#wrap.night figure {background-image: url(../img/phone_night.png)}
+#wrap.night figure p {color: #fff;}
+#wrap.night>img:nth-child(1) {opacity: 0.1;}
+#wrap.night>img:nth-child(2) {opacity: 0.1;}
+#wrap.night figure p img.cl1 {opacity: .4;}
+#wrap.night figure p img.cl2 {opacity: .4;}

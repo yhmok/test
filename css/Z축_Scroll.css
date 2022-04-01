@@ -1,0 +1,92 @@
+html, body {
+    scroll-behavior: smooth;
+}
+body {
+    width: 100%; height: 23000px; font-size: 12px;
+}
+/* 배경 */
+.bg {
+    position: fixed; width: 100%; height: 100%;
+    top:0; left:0;
+    background: url(../img1/bg.jpg)no-repeat center top;
+    background-size: cover;
+}
+/* 로고 */
+h1 {
+    position: fixed; top: 40px; left: 70px; 
+    z-index: 2;
+}
+h1 img {
+    width: 130px;
+}
+/* 스크롤 네비게이션 */
+.scrollNavi {
+    position: fixed; left: 100px; top: 300px;
+    z-index: 2;
+}
+.scrollNavi li {
+    position: relative; width: 150px; height: 35px;
+    margin-bottom: 20px; font-size: 12px;
+    color: #fff; text-align: center;
+    cursor: pointer;
+}
+.scrollNavi li em {
+    position: absolute; top: 8px; left: 20px;
+    font-size: 14px; font-weight: bold;
+    color: #fff; text-shadow: 1px 1px 1px #000;
+}
+.scrollNavi li span {
+    display: block; width: 3%; height: 100%;
+    position: absolute;transform: skew(-30deg);
+    box-shadow: 1px 1px 1px #000;
+}
+.scrollNavi li.on span {width: 100%;}
+.scrollNavi li:nth-child(1) span {background: #ff0f51;}
+.scrollNavi li:nth-child(2) span {background: #fffb02;}
+.scrollNavi li:nth-child(3) span {background: #b57de4;}
+.scrollNavi li:nth-child(4) span {background: #7cf923;}
+.scrollNavi li:nth-child(5) span {background: #3dbdfa;}
+/* section */
+section {
+    position: fixed; width: 1200px; height: 700px;
+    left: 50%; top: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    perspective: 2300px; /*원근감 설정*/
+}
+section>article {
+    position: absolute; top:0; left:0;
+    width: 1200px; height: 700px;
+    opacity: 0.3;
+    z-index: 1;
+}
+section>article.on {
+    opacity: 1;
+    z-index: 2;
+}
+section>article:nth-child(1) {transform: translateZ(0px);}
+section>article:nth-child(2) {transform: translateZ(-5000px);}
+section>article:nth-child(3) {transform: translateZ(-10000px);}
+section>article:nth-child(4) {transform: translateZ(-15000px);}
+section>article:nth-child(5) {transform: translateZ(-20000px);}
+section>article>img {
+    position: absolute;
+}
+/* 1 */
+.obj11 {bottom: -100px; left: -270px;}
+.obj12 {top: -85px; right: -593px;}
+.obj13 {bottom: 20px; left: -100px;}
+/* 2 */
+.obj21 {bottom: -420px; right: -710px;}
+.obj22 {bottom: -100px; right: -50px;}
+/* 3 */
+.obj31 {bottom: 70px; right: 110px;}
+.obj32 {bottom: -160px; left: 100px;}
+/* 4 */
+.obj41 {bottom: -150px; left: 350px;}
+.obj42 {top: -250px; right: 160px;}
+.obj43 {bottom: -120px; right: -100px;}
+/* 5 */
+.obj51 {bottom: -290px; right: 30px;}
+.obj52 {top: 170px; right: 30px;}
+.obj53 {bottom: 0px; left: -30px;}

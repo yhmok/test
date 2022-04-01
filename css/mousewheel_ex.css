@@ -1,0 +1,56 @@
+html, body {
+    scroll-behavior: smooth;
+}
+/* 메뉴 */
+#menu {
+    position: fixed; top: 50%; left: 0px;
+    margin-top: -100px;
+    z-index: 10;
+}
+#menu a {
+    display: block;   
+    width: 200px; height: 60px;
+    font-size: 14px; color: #000;
+    text-align: right;
+    border-top: 1px solid #111;
+    opacity: 0.8; transition: 0.5s;
+}
+#menu li:hover a {
+    font-size: 24px; opacity: 1;
+}
+#menu li:nth-child(1):hover a {color: #d4164c; border-color: #d4164c;}
+#menu li:nth-child(2):hover a {color: #fff; border-color: #fff;}
+#menu li:nth-child(3):hover a {color: #ffec6a; border-color: #ffec6a;}
+#menu li:nth-child(4):hover a {color: #005a89; border-color: #005a89;}
+
+#menu li:nth-child(1).on a {color: #d4164c; border-color: #d4164c;}
+#menu li:nth-child(2).on a {color: #fff; border-color: #fff;}
+#menu li:nth-child(3).on a {color: #ffec6a; border-color: #ffec6a;}
+#menu li:nth-child(4).on a {color: #005a89; border-color: #005a89;}
+/* 화면 */
+section {
+    width: 100%; height: 100vh;
+    background-size: cover;
+    background-position: right center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+section:nth-child(1) {background-image: url(../img/bg1.jpg);}
+section:nth-child(2) {background-image: url(../img/bg2.jpg);}
+section:nth-child(3) {background-image: url(../img/bg3.jpg);}
+section:nth-child(4) {background-image: url(../img/bg4.jpg);}
+
+.p11 {position: absolute; bottom: 20px; right: 20px;}
+.p12 {position: absolute; bottom: -40px; right: 130px;}
+.p13 {position: absolute; top: 180px; right: 60px;}
+
+.p21 {position: absolute; bottom: -480px; right: -180px;}
+.p22 {position: absolute; bottom: -40px; right: 130px;}
+
+.p31 {position: absolute; bottom: 30px; right: 180px;}
+.p32 {position: absolute; bottom: -270px; right: 110px;}
+.p33 {position: absolute; bottom: -130px; right: -70px;}
+
+.p41 {position: absolute; bottom: -120px; right: 20px;}
+.p42 {position: absolute; bottom: -180px; right: 0px;}
